@@ -1,53 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TwentyQuestions Privacy Policy</title>
-  <link rel="stylesheet" href="../../assets/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TwentyQuestions Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the TwentyQuestions iOS app.">
+<link rel="stylesheet" href="../../assets/styles.css">
 </head>
 <body>
 <main>
-  <nav><a href="../../">All apps</a> · <a href="../terms/">Terms</a> · <a href="../support/">Support</a></nav>
-  <h1>TwentyQuestions Privacy Policy</h1>
-  <p class="meta"><strong>Draft — verify against the app before App Store submission.</strong><br>Last updated: October 7, 2026</p>
+<nav><a href="../../">All apps</a> · <a href="../terms/">Terms</a> · <a href="../support/">Support</a></nav>
+<h1>TwentyQuestions Privacy Policy</h1>
+<p class="meta">Last updated: October 7, 2026</p>
 
-  <p>This Privacy Policy explains how TwentyQuestions handles information when you use the application.</p>
+<p>TwentyQuestions (“Twenty Questions: Emoji”, the “app”) is an iPhone and iPad game published by alexGamer92 (the “developer”, “we”). This policy explains what information the app handles, where it goes and what choices you have. It describes the app as it works today.</p>
 
-  <h2>1. Information We Collect</h2>
-  <p><strong>TODO before release:</strong> Claude must inspect the TwentyQuestions codebase and replace this paragraph with the exact data collected by the app. Check for account information, identifiers, analytics, crash data, advertising data, purchases, user-generated content, device information, location, contacts, microphone/camera access, notifications, and any backend database or API.</p>
+<h2>1. Short version</h2>
+<ul>
+<li>You can play as a <strong>guest</strong> without giving us a name, email address or any sign-in. The app still creates an anonymous account on our server so your games, streak and credits can be stored.</li>
+<li>You can sign in with <strong>Apple</strong> or <strong>Google</strong> to compete, buy credits and keep your progress across devices.</li>
+<li>The app has <strong>no advertising, no analytics SDK, no crash-reporting SDK and no tracking</strong> across other companies' apps and websites.</li>
+<li>The app does not use your location, contacts, camera, microphone, photos or notifications.</li>
+<li>You can delete your account and its data inside the app (Profile → Delete account).</li>
+</ul>
 
-  <h2>2. Information Stored on Your Device</h2>
-  <p><strong>TODO before release:</strong> Document any game state, preferences, scores, settings, history, or other information stored locally on the device.</p>
+<h2>2. Information we collect and why</h2>
+<h3>Account information</h3>
+<ul>
+<li><strong>Anonymous account (guests).</strong> At first launch the app asks our server (Supabase, see section 5) for an anonymous account. It consists of a random user ID. No name or email is needed.</li>
+<li><strong>Sign in with Apple.</strong> If you sign in with Apple, Apple gives our server an identifier for your Apple account, which is linked to your existing user ID. The app does not ask Apple for your name or email address. Apple may let you hide your email, and any email Apple includes in its response may be stored by our authentication service.</li>
+<li><strong>Sign in with Google.</strong> If you sign in with Google, Google gives our server an identifier for your Google account together with the details in Google's sign-in token, which can include your email address and name. Our authentication service stores the identity data it receives so you can sign in again.</li>
+<li><strong>Display name.</strong> A name you choose yourself (2 to 20 characters). Other players see it on leaderboards and in competitions. Please do not use your real name or personal details if you do not want them shown. Names are checked by a simple filter, and we may remove names that break our <a href="../terms/">Terms</a>.</li>
+<li><strong>Language.</strong> The language you choose in the app is stored with your account.</li>
+</ul>
 
-  <h2>3. Third-Party Services</h2>
-  <p><strong>TODO before release:</strong> List every third-party SDK or service used by the app, such as Apple services, analytics providers, authentication providers, advertising networks, crash reporting, cloud storage, backend services, or AI providers. Include links to their privacy policies where appropriate.</p>
+<h3>Gameplay information</h3>
+<ul>
+<li>The games you play: the secret emoji for the game, your questions, answers, guesses and hints, the moves used, the time (measured by our server) and the result.</li>
+<li>Your daily-puzzle statistics (games played, won, streak, best streak).</li>
+<li>Your credit balance and a ledger of credit changes (purchases, hints bought, extra practice games, prizes, refunds).</li>
+<li>Competitions, races, the Weekly League and the Weekend Cup: the competitions you create or join (a name you choose for a competition, a join code), your results, ranking, moves, hints taken, times and any credit prizes. Other participants can see your display name, rank, moves, hints and time in those leaderboards.</li>
+</ul>
+<p>We use this information to run the game, keep your progress, show leaderboards, award prizes, prevent cheating and unfair play, and give support.</p>
 
-  <h2>4. Purchases and Subscriptions</h2>
-  <p>If TwentyQuestions offers in-app purchases or subscriptions, payments are processed by Apple through the App Store. The developer does not receive your full payment-card information. <strong>Remove this section if the app has no purchases.</strong></p>
+<h3>Purchases</h3>
+<p>Credits are bought through Apple's in-app purchase system. Apple processes the payment; we never receive your payment-card details. To grant your credits, the purchase is handled by <strong>RevenueCat</strong>, which receives your purchase information and your app user ID (the same random user ID as above), and which our server then uses to add the credits to your account. RevenueCat also receives technical information such as device and app details and your IP address, as described in its privacy policy.</p>
 
-  <h2>5. How Information Is Used</h2>
-  <p><strong>TODO before release:</strong> Describe each purpose for which collected information is used, such as providing app functionality, saving progress, account management, analytics, fraud prevention, customer support, or improving the app.</p>
+<h3>Technical information</h3>
+<p>Like any online service, our server provider and the services in section 5 may process technical data such as your IP address and request logs when your device connects. We do not use this to track you and we do not add analytics of our own.</p>
 
-  <h2>6. Data Sharing</h2>
-  <p><strong>TODO before release:</strong> State whether information is shared with service providers or other third parties, and for what purposes. Do not state that data is never shared unless the code and services confirm that.</p>
+<h2>3. Information we do not collect</h2>
+<p>The app does not request or use your precise or approximate location, contacts, photos, camera, microphone, health data, or advertising identifier, and it does not send push notifications. It does not contain advertising or third-party analytics, and it does not track you across other companies' apps and websites. We do not sell your personal information.</p>
 
-  <h2>7. Data Retention and Deletion</h2>
-  <p><strong>TODO before release:</strong> Explain how long user data is retained and how a user can request deletion. If the app supports account creation, ensure the policy matches the account-deletion functionality required by Apple.</p>
+<h2>4. Information stored on your device</h2>
+<ul>
+<li><strong>Sign-in session.</strong> The app keeps your session token in the iOS Keychain (through the Supabase library) so you stay signed in.</li>
+<li><strong>Preferences.</strong> Your chosen language is saved on the device (UserDefaults).</li>
+<li><strong>Purchase data.</strong> The RevenueCat and Apple libraries may cache purchase and product information on the device.</li>
+</ul>
+<p>Your games, credits and name live on our server, not only on your phone. If you delete the app, that server data stays until you delete your account (see section 8). If you sign out as a guest, your anonymous account and its games are deleted, because a guest cannot sign back in to it.</p>
 
-  <h2>8. Children's Privacy</h2>
-  <p><strong>TODO before release:</strong> Set the intended age audience and ensure this section matches the app's App Store age rating and actual data practices.</p>
+<h2>5. Third-party services</h2>
+<p>The app uses these services. Each processes information under its own privacy policy:</p>
+<ul>
+<li><strong>Supabase</strong> (database, authentication and server functions; our project is hosted in the EU, in Frankfurt, Germany): stores the account and gameplay information described above. <a href="https://supabase.com/privacy">supabase.com/privacy</a></li>
+<li><strong>Apple</strong> (Sign in with Apple, App Store payments, TestFlight): <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+<li><strong>Google</strong> (Sign in with Google, only if you choose it): <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+<li><strong>RevenueCat</strong> (purchase processing for credits): <a href="https://www.revenuecat.com/privacy/">revenuecat.com/privacy</a></li>
+</ul>
+<p>Some of these providers may process data outside your country, including in the United States. We do not otherwise share your information with third parties, except where the law requires it or to protect the rights and safety of players and the service.</p>
 
-  <h2>9. Security</h2>
-  <p>Reasonable technical and organizational measures are used to protect information handled by the app. No method of electronic storage or transmission can be guaranteed to be completely secure.</p>
+<h2>6. What other players can see</h2>
+<p>Other players can see your display name and, in competitions you take part in, your rank, moves, hints taken, time and results. They cannot see your email address, sign-in provider, credit balance or purchases.</p>
 
-  <h2>10. Changes to This Policy</h2>
-  <p>This Privacy Policy may be updated when TwentyQuestions changes. The current version will be published on this page and the “Last updated” date will be revised.</p>
+<h2>7. Data retention</h2>
+<p>We keep your account and gameplay data for as long as your account exists. Deleting your account removes it (section 8). We do not currently delete inactive accounts automatically, so an anonymous guest account that you simply stop using remains until it is deleted. Information held by Apple, Google, RevenueCat and Supabase for their own purposes follows their own retention rules.</p>
 
-  <h2>11. Contact</h2>
-  <p>For privacy questions or requests, use the <a href="../support/">TwentyQuestions support page</a>.</p>
+<h2>8. Deleting your data and your rights</h2>
+<p>In the app, open <strong>Profile → Delete account</strong>. This permanently deletes your account, display name, games, credit balance and history, leaderboard entries, and the competitions you created. If you signed in with Apple, the app also revokes its access to your Apple ID. Remaining credits are lost and cannot be refunded or transferred. You can also sign out at any time; signing out keeps a signed-in account's data on the server so you can sign back in to it.</p>
+<p>Depending on where you live (for example in the European Economic Area or the UK), you may have rights to access, correct, export, restrict or erase your personal information and to object to its processing, and to complain to your data-protection authority. Most of these you can exercise directly in the app; for anything else, contact us through the <a href="../support/">support page</a>. If we cannot identify an anonymous account without your help, we may ask you for details that let us find it.</p>
 
-  <footer>TwentyQuestions · Privacy Policy</footer>
+<h2>9. Children's privacy</h2>
+<p>TwentyQuestions is a general-audience game and is not directed at children under 13. Competitions, credit prizes and sign-in with an Apple or Google account are meant for people aged 13 or over. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us personal information, contact us through the <a href="../support/">support page</a> and we will delete it.</p>
+
+<h2>10. Security</h2>
+<p>Game rules and secret answers are kept on our server, and the app talks to it over encrypted connections (HTTPS). Access to the data is limited by account-based security rules. No method of storage or transmission is completely secure, so we cannot guarantee absolute security.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>We may update this policy when the app or the law changes. The current version is always published on this page with a new “Last updated” date. If a change is significant, we will say so in the app.</p>
+
+<h2>12. Contact</h2>
+<p>For privacy questions or requests, use the <a href="../support/">TwentyQuestions support page</a>.</p>
+
+<footer>TwentyQuestions · Privacy Policy</footer>
 </main>
 </body>
 </html>
