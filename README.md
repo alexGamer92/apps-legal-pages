@@ -43,3 +43,16 @@ attorney-reviewed.
 ## Adding another app
 
 Copy the `twentyquestions` directory, rename the folder to the new app slug, then fully rewrite the app-specific legal text.
+
+## Chef Enzo pages
+- `https://alexgamer92.github.io/apps-legal-pages/chefenzo/privacy/`
+- `https://alexgamer92.github.io/apps-legal-pages/chefenzo/terms/`
+
+These pages describe the pre-release implementation reviewed on 2026-10-18: local
+saves, no player account or cloud save, unavailable ads and unconfigured purchases.
+Unity LevelPlay and Apple subscriptions through Unity IAP 5.4.4 / StoreKit 2 are
+planned, not represented as live. Before enabling them, verify SDK data flows,
+actual mediated partners, consent/ATT controls and provider retention/transfers;
+update the policy and App Store privacy answers together. Confirm the subscription
+benefits/content schedule and localized price before offering purchases.
+Support uses the existing developer contact. These pages are not attorney-reviewed.
