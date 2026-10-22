@@ -9,41 +9,96 @@
 </head>
 <body>
 <main>
-<nav><a href="../../">All apps</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="mailto:alexandrustruta@gmail.com">Support</a></nav>
+<nav><a href="../../">All apps</a> · <a href="../terms/">Terms</a> · <a href="../support/">Support</a></nav>
 <h1>Chef Enzo Privacy Policy</h1>
-<p class="meta">Last updated: October 18, 2026</p>
+<p class="meta">Last updated: October 22, 2026</p>
 
-<p>This policy explains how Chef Enzo, a cooking-themed game published by Alexandru Struta (the “developer”, “we”, “us”), handles information. Contact: <a href="mailto:alexandrustruta@gmail.com">alexandrustruta@gmail.com</a>.</p>
-<p><strong>Current scope:</strong> Chef Enzo is in development. As of the date above, the pre-release build saves progress locally, has no player accounts or developer-operated cloud saves, and does not serve advertisements or offer live purchases. Advertising through Unity LevelPlay and Apple subscriptions are planned; the sections below distinguish those planned features from current behavior. This policy must be updated before changed data practices are enabled.</p>
+<!-- DEPENDS: D9 legal name and contact email (taken from the existing policy) -->
+<p>Chef Enzo is an iPhone cooking game published by Alexandru Struta, an individual developer based in Romania (the “developer”, “we”, “us”). This policy explains what information the game handles, where it goes and what choices you have. It describes version 1.0 of the game. Contact: <a href="mailto:alexandrustruta@gmail.com">alexandrustruta@gmail.com</a>.</p>
 
-<h2>1. Game progress on your device</h2>
-<p>The game stores progress, stars, coins, unlocked recipes, upgrades, outfits and cosmetics, reward dates and game-run markers on your device. These records make progress and rewards work and prevent duplicate rewards. The developer does not receive these save files automatically. There is no developer-operated account or cross-device progress synchronization. Device backups may contain app data according to your device and backup settings.</p>
+<h2>1. Short version</h2>
+<ul>
+<li>There is <strong>no account and no sign-in</strong>. The game never asks for your name, email address or phone number.</li>
+<li>Your progress, coins and settings are saved <strong>only on your iPhone</strong>. We do not receive them and there is no cloud save.</li>
+<!-- DEPENDS: D1 ads off; D2 subscriptions ship (if cut, the last sentence goes back to "We use no analytics or crash-reporting service.") -->
+<li>Version 1.0 shows <strong>no advertisements</strong>, does <strong>no tracking</strong> and does not read your advertising identifier (IDFA). We have added no analytics or crash-reporting service of our own; the only analytics-type data is the purchase events that Unity's purchasing library sends to Unity (section 3).</li>
+<!-- DEPENDS: D2 subscriptions ship -->
+<li>If you buy or restore Chef Enzo Premium, <strong>Apple</strong> handles the payment, and <strong>Unity's purchasing library</strong> built into the game sends technical purchase information to Unity (see section 3).</li>
+<li>The daily reminder is a <strong>local notification</strong> that you can turn on in Settings. It is created on your iPhone; no server is involved.</li>
+</ul>
 
-<h2>2. Support messages</h2>
-<p>If you email us, we receive your email address, message and any attachments you choose to send. We use them to respond to your request and investigate problems. Avoid sending passwords, payment-card details or unrelated sensitive information. Our email provider processes correspondence to deliver and store email.</p>
+<h2>2. Information stored on your device</h2>
+<p>The game keeps these files on your iPhone so it can work:</p>
+<ul>
+<li><strong>Game save</strong>: coins, stars per level, collected recipes, upgrades, owned and equipped outfits, pans and decorations, saved power-ups, daily-gift dates and streak, your Dish of the Day best scores, tutorial progress and a few markers that stop the same reward being claimed twice. A backup copy is kept in case saving is interrupted.</li>
+<li><strong>Audio settings</strong>: your music and sound volume.</li>
+<li><strong>Reminder setting</strong>: whether you turned the daily reminder on.</li>
+</ul>
+<p>These files contain no name, email address, account or device identifier, and they are not sent to us. Your iPhone's own backups (iCloud or computer) may include them, depending on your backup settings.</p>
+<!-- DEPENDS: D2 subscriptions ship -->
+<p>Whether you have an active Premium subscription is checked with Apple each time the game starts or comes back to the foreground. The game keeps that answer in memory only and does not save it.</p>
 
-<h2>3. Planned purchases</h2>
-<p>When purchases become available, Apple will process payment through the App Store. The game uses Unity In-App Purchasing and Apple StoreKit to obtain product prices and transaction information, verify subscription status, restore purchases and respond to expiration or revocation. The developer does not receive your full payment-card details. Apple handles your Apple Account and billing information under its <a href="https://www.apple.com/legal/privacy/">privacy policy</a>.</p>
-<p>Unity's purchasing service may process transaction and technical information under its <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Game Player and App User Privacy Policy</a>. Installing a purchasing package does not mean live purchasing is already available. The enabled service configuration and related disclosures will be reviewed before purchases launch.</p>
+<!-- DEPENDS: D2 subscriptions ship (whole section; if subscriptions are cut, remove it and the Unity rows in sections 1, 5, 9 and 10) -->
+<h2>3. Chef Enzo Premium purchases</h2>
+<p><strong>Apple.</strong> Subscriptions are sold through the App Store. Apple processes your payment, your Apple Account and your purchase history under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. We never see your card or bank details. The game asks Apple (StoreKit) for product names and prices and for your active subscriptions, and starts a purchase or a restore when you tap the button.</p>
+<p><strong>Unity.</strong> The game uses Unity In-App Purchasing, a library made by Unity Technologies, to talk to StoreKit. When a purchase is started, completed, pending or fails (and possibly when the game checks an existing subscription at launch or during a restore), this library sends a technical purchase event to Unity's servers. Based on our review of the library, an event can include:</p>
+<ul>
+<li>an identifier that is the same for all of our apps on your iPhone (Apple's “identifier for vendor”), an event ID, a session ID and time stamps;</li>
+<li>device and app details: iPhone model, iOS version, language and region settings, storage size, time since the device last started, the game's bundle ID and version, and the Unity and library versions;</li>
+<li>purchase details: the product, its title, description and price, currency, quantity, the App Store transaction ID and, when a purchase completes, the App Store receipt and signed transaction data.</li>
+</ul>
+<p>This happens automatically inside Unity's library; the game has no setting to turn it off. We do not use this information and do not receive reports from it. It does not include your name, email address or advertising identifier (IDFA). Unity handles it under its <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Game Player and App User Privacy Policy</a>, which also explains how to make a request to Unity.</p>
+<!-- END DEPENDS: D2 -->
 
-<h2>4. Planned advertising and privacy choices</h2>
-<p>Unity LevelPlay has been selected for future rewarded and interstitial advertisements. It is not currently serving ads in Chef Enzo; no mediated advertising network is represented here as already enabled. Before advertisements are enabled, this policy will identify the actual providers, the information they process, purposes and available privacy controls.</p>
-<p>Advertising services can process device identifiers, IP addresses, device information and ad interactions to deliver and measure ads and prevent fraud. Personalized advertising may involve additional processing. See <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's privacy policy</a> for its services. This description of planned advertising is not a consent request. Any legally required consent and Apple's tracking permission will be handled before the relevant processing begins; refusing tracking permission must not prevent access to the free game.</p>
+<h2>4. Daily reminder (optional)</h2>
+<p>In Settings you can tap <strong>Enable daily reminder</strong>. Only then does iOS ask whether Chef Enzo may send notifications. If you allow it, the game schedules one repeating local notification on your iPhone for 18:00 your local time (“Your Dish of the Day is ready. Come and cook!”). It is not a push notification: nothing is sent to us or to any server. Tap <strong>Disable daily reminder</strong> in Settings, or turn off notifications for Chef Enzo in the iOS Settings app, to stop it.</p>
 
-<h2>5. Analytics and permissions</h2>
-<p>The current game does not implement player accounts, social sign-in, chat, a developer analytics service or cloud crash reporting. It does not request access to your contacts, camera, microphone or precise location. The operating system and app marketplace may separately process diagnostic and download information under their own settings and policies.</p>
+<h2>5. Advertising, tracking and analytics</h2>
+<!-- DEPENDS: D1 ads off, D1b LevelPlay kept linked but never started -->
+<p>Chef Enzo 1.0 shows no advertisements and does not track you across other companies' apps or websites. It does not ask for App Tracking Transparency permission and does not read your advertising identifier (IDFA). The app contains an advertising library (Unity LevelPlay) prepared for a possible future update; in version 1.0 it is never started and sends nothing.</p>
+<p>If a future update adds advertisements, we will update this policy first, name the ad providers and the information they use, and ask for your consent and Apple's tracking permission where that is required.</p>
+<!-- DEPENDS: D2 subscriptions ship (if cut: "We do not use an analytics or crash-reporting service, and Unity's engine ...") -->
+<p>Apart from the purchase events that Unity's purchasing library sends to Unity (section 3), we use no analytics or crash-reporting service, and Unity's engine statistics and cloud crash reporting are switched off in the game's settings. If you choose to share analytics with app developers in your iPhone's settings, Apple may give us anonymous crash reports and usage statistics; Apple controls that choice.</p>
 
-<h2>6. Reasons for processing and sharing</h2>
-<p>Where data protection law requires a legal basis, we process support correspondence to respond to your request and for our legitimate interest in maintaining and supporting the game; we process information needed to provide a purchased feature to perform our agreement with you, and retain information where required by law. Consent is used where required for optional tracking or advertising processing. We do not sell support messages or local game saves. Information may be disclosed when required by law or necessary to protect legal rights.</p>
-<p>External providers may process information outside your country under their own applicable safeguards and policies. The linked Apple and Unity policies explain their handling of information and available rights.</p>
+<!-- DEPENDS: D5 leaderboard deferred -->
+<h2>6. Game Center</h2>
+<p>Chef Enzo 1.0 does not use Game Center. It does not sign you in, read your Game Center player ID or send scores. Your Dish of the Day best score is kept only on your iPhone. If a future update adds a Game Center leaderboard, this policy will be updated first.</p>
 
-<h2>7. Retention, deletion and your rights</h2>
-<p>Local progress remains on your device until removed or overwritten. Deleting the app and its data removes the local copy; offloading an app can preserve data, and device backups may retain copies. We cannot recover local progress from a server. Removing the app does not cancel an Apple subscription or erase Apple's transaction records.</p>
-<p>Support correspondence is retained as needed to handle the request, follow up on issues and meet applicable legal obligations; there is no fixed deletion period promised by this policy. You can email us to request access, correction or deletion of information we hold about you. Depending on your location, you may also have rights to restriction, portability, objection, withdrawal of consent and a complaint to your data protection authority. We may need to verify a request. Provider-held records and legally required retention may be subject to separate rules.</p>
+<h2>7. Permissions and links</h2>
+<p>The game does not ask for your location, contacts, photos, camera, microphone or Bluetooth. The only permission it can ask for is notifications, and only when you turn on the daily reminder.</p>
+<p>The Privacy Policy, Terms of Use and music credit buttons open web pages in Safari. Those websites (GitHub Pages, incompetech.com and creativecommons.org) receive the usual information any browser sends; the game adds nothing of its own.</p>
 
-<h2>8. Audience and changes</h2>
-<p>Chef Enzo is intended for an adult audience and is not directed to children. If you believe a child has sent us personal information, contact us so we can review and address it.</p>
-<p>Updates will be posted here with a revised date. Material changes will receive additional notice or consent where required. For questions or privacy requests, email <a href="mailto:alexandrustruta@gmail.com">alexandrustruta@gmail.com</a>.</p>
+<h2>8. Emails to us</h2>
+<p>If you email us, we receive your email address, your message and anything you attach. We use them only to answer you and fix problems. Please don't send passwords or payment details. Our email provider (Google) stores this correspondence for us.</p>
+
+<h2>9. Legal bases (EU/EEA and UK)</h2>
+<p>The developer, Alexandru Struta (Romania), is responsible for the information described here. Where the GDPR applies:</p>
+<ul>
+<!-- DEPENDS: D2 subscriptions ship -->
+<li>processing to sell and restore Premium is needed to provide the subscription you ask for (performance of a contract);</li>
+<!-- DEPENDS: D2 + Unity Insights decision. ePrivacy art. 5(3) (RO Law 506/2004) risk: reading the IDFV/device data is not strictly needed for the purchase. Preferred fix: neutralise the IAP Insights emitter, confirm with a network capture, then delete this item and the Unity text in sections 1, 3, 5, 9 and 10. -->
+<li>including Unity's purchasing library relies on our legitimate interest in using a reliable, widely used purchasing library. Unity decides for itself how it uses the technical purchase events the library sends: it receives them for its own purposes, as an independent controller under its own privacy policy (section 3), not on our behalf;</li>
+<li>answering emails relies on our legitimate interest in supporting the game, or on steps you ask us to take;</li>
+<li>the daily reminder runs only after you turn it on and allow notifications.</li>
+</ul>
+<p>We do not sell your information. Apple and Unity may process information outside your country, including in the United States, under the safeguards described in their own policies. We may disclose information if the law requires it or to protect legal rights.</p>
+
+<h2>10. How long information is kept</h2>
+<ul>
+<li>Game files stay on your iPhone until you delete the app. Deleting the app deletes your progress, and we cannot recover it. Offloading the app keeps its data, and device backups may keep copies.</li>
+<li>Emails are kept as long as needed to handle your request and any follow-up, then deleted, unless the law requires us to keep them.</li>
+<!-- DEPENDS: D2 subscriptions ship -->
+<li>Apple and Unity keep their records under their own policies. Deleting the app does not cancel a subscription or delete Apple's records.</li>
+</ul>
+
+<h2>11. Your rights</h2>
+<p>Depending on where you live, you may have the right to access, correct or delete information about you, to restrict or object to processing, to data portability and to withdraw consent. Email us to use these rights; we may need to confirm the request is yours. We do not hold your game data or the purchase events, so for those we may refer you to Apple or Unity. You can also complain to a data protection authority, for example in the country where you live or, in Romania, the ANSPDCP (<a href="https://www.dataprotection.ro/">dataprotection.ro</a>).</p>
+
+<h2>12. Children</h2>
+<p>Chef Enzo is a game for a general audience. It is not directed at children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has sent us personal information, email us and we will delete it.</p>
+
+<h2>13. Changes and contact</h2>
+<p>We will post any changes here with a new date. If a change significantly affects how your information is used, we will also tell you in the game or ask for your consent where required. Questions or requests: <a href="mailto:alexandrustruta@gmail.com">alexandrustruta@gmail.com</a>.</p>
 
 <footer>Chef Enzo · Privacy Policy</footer>
 </main>
