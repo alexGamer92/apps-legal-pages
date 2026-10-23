@@ -15,29 +15,28 @@ Each app gets its own folder:
 
 The first app is `twentyquestions`.
 
-## GitHub Pages
+## Cloudflare Pages (TwentyQuestions)
 
-Enable GitHub Pages in:
+The TwentyQuestions pages are published by the Cloudflare Pages project `twentyquestions-legal`, which
+deploys on every push to `main`. The site serves `twentyquestions/*` and `assets/` at its root, with the
+privacy policy as the home page:
 
-**Repository → Settings → Pages → Build and deployment**
+- `https://twentyquestions-legal.pages.dev/privacy/`
+- `https://twentyquestions-legal.pages.dev/terms/`
+- `https://twentyquestions-legal.pages.dev/support/`
 
-Use:
-
-- Source: **Deploy from a branch**
-- Branch: **main**
-- Folder: **/(root)**
-
-Once enabled, the TwentyQuestions pages should be available at:
-
-- `https://alexgamer92.github.io/apps-legal-pages/twentyquestions/privacy/`
-- `https://alexgamer92.github.io/apps-legal-pages/twentyquestions/terms/`
-- `https://alexgamer92.github.io/apps-legal-pages/twentyquestions/support/`
+The app's Profile links (`AppLinks` in `twentyq/.../Screens/ProfileScreen.swift`) point here; App Store
+Connect's privacy policy, terms and support URLs should be these too.
 
 ## TwentyQuestions pages
 
-The TwentyQuestions privacy policy, terms and support pages describe the app as audited on 2026-10-07
-(Supabase, Apple and Google sign-in, RevenueCat purchases; no ads, analytics or tracking). Update them
-whenever the app's data handling changes, and keep the support contact current. They are not
+The TwentyQuestions privacy policy, terms and support pages describe build 17 as checked on 2026-10-23:
+no registration or sign-in (an anonymous Supabase account from first launch), an optional Game Center link
+(only a SHA-256 hash of the team player ID is stored, never the nickname), automatic player names, RevenueCat
+purchases, "Delete my data" in Profile, and the 90-day purge of unlinked guests that never had credits;
+no ads or tracking. Sources: `twentyq/docs/specs/2026-10-23-no-sign-in-*.md`, the
+`20261023*` migrations and the `game-center-link`, `delete-account` and `revenuecat-webhook` functions.
+Update them whenever the app's data handling changes, and keep the support contact current. They are not
 attorney-reviewed.
 
 ## Adding another app
