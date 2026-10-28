@@ -65,7 +65,7 @@ Served by the Cloudflare Pages project `honest-minutes` from this repo (`main`).
 - `https://honest-minutes.pages.dev/terms/`
 - `https://honest-minutes.pages.dev/support/`
 
-Build command: `mkdir -p dist && cp -R honestminutes/. dist/ && cp -R assets dist/`; output directory: `dist`.
+Build command: `mkdir -p dist && cp -R assets honestminutes/* dist/`; output directory: `dist`.
 
 They describe Honest Minutes 1.0 as of 2026-10-28: no account, no server, no analytics; pages stored only on the
 device; an optional Game Center sign-in (best streak, total minutes, five achievements); a one-time Pro purchase
