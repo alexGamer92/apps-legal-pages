@@ -55,3 +55,18 @@ actual mediated partners, consent/ATT controls and provider retention/transfers;
 update the policy and App Store privacy answers together. Confirm the subscription
 benefits/content schedule and localized price before offering purchases.
 Support uses the existing developer contact. These pages are not attorney-reviewed.
+
+## Honest Minutes pages
+
+Served by the Cloudflare Pages project `honest-minutes` from this repo (`main`). The build copies
+`honestminutes/*` and `assets/` to the site root:
+
+- `https://honest-minutes.pages.dev/privacy/`
+- `https://honest-minutes.pages.dev/terms/`
+- `https://honest-minutes.pages.dev/support/`
+
+Build command: `mkdir -p dist && cp -R honestminutes/. dist/ && cp -R assets dist/`; output directory: `dist`.
+
+They describe Honest Minutes 1.0 as of 2026-10-28: no account, no server, no analytics; pages stored only on the
+device; an optional Game Center sign-in (best streak, total minutes, five achievements); a one-time Pro purchase
+through Apple; local reminders. Source: the MinutesWritten repo. Not attorney-reviewed.
