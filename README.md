@@ -73,15 +73,19 @@ through Apple; local reminders. Source: the MinutesWritten repo. Not attorney-re
 
 ## Thumbrot pages
 
-Served by GitHub Pages from this repo (`main`), and reached through the short links on the Cloudflare Pages
-project `thumbrot`, whose `_redirects` lives in the Thumbrot repo (`remote/_redirects`):
+Served by the Cloudflare Pages project `thumbrot-legal` from this repo (`main`), like the other apps. The build
+copies `thumbrot/*` and `assets/` to the site root (`thumbrot/index.html` is the home page):
 
-- `https://thumbrot.pages.dev/privacy` → `https://alexgamer92.github.io/apps-legal-pages/thumbrot/privacy/`
-- `https://thumbrot.pages.dev/terms` → `…/thumbrot/terms/`
-- `https://thumbrot.pages.dev/support` → `…/thumbrot/support/`
-- `https://thumbrot.pages.dev/promote` → `…/thumbrot/promote/`
+- `https://thumbrot-legal.pages.dev/privacy/`
+- `https://thumbrot-legal.pages.dev/terms/`
+- `https://thumbrot-legal.pages.dev/support/`
+- `https://thumbrot-legal.pages.dev/promote/`
 
-The app and App Store Connect use only the short links, so these pages can move without an app update.
+Build command: `mkdir -p dist && cp -R assets thumbrot/* dist/`; output directory: `dist`.
+
+The app and App Store Connect use the short links on the Cloudflare Pages project `thumbrot`
+(`https://thumbrot.pages.dev/privacy`, `/terms`, `/support`, `/promote`, and `/` for the home page), which redirect
+here; their `_redirects` lives in the Thumbrot repo (`remote/_redirects`). So these pages can move without an app update.
 The promote page offers free card swaps only: the app links to it, and Apple doesn't allow an app to link to
 the sale of ad space in that app (guideline 3.1.3(g)), so paid placements are never mentioned there.
 The pages describe Thumbrot 1.0 as of 2026-10-30. Source: the Thumbrot repo. Not attorney-reviewed.
