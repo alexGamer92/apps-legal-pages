@@ -70,3 +70,18 @@ Build command: `mkdir -p dist && cp -R assets honestminutes/* dist/`; output dir
 They describe Honest Minutes 1.0 as of 2026-10-28: no account, no server, no analytics; pages stored only on the
 device; an optional Game Center sign-in (best streak, total minutes, five achievements); a one-time Pro purchase
 through Apple; local reminders. Source: the MinutesWritten repo. Not attorney-reviewed.
+
+## Thumbrot pages
+
+Served by GitHub Pages from this repo (`main`), and reached through the short links on the Cloudflare Pages
+project `thumbrot`, whose `_redirects` lives in the Thumbrot repo (`remote/_redirects`):
+
+- `https://thumbrot.pages.dev/privacy` → `https://alexgamer92.github.io/apps-legal-pages/thumbrot/privacy/`
+- `https://thumbrot.pages.dev/terms` → `…/thumbrot/terms/`
+- `https://thumbrot.pages.dev/support` → `…/thumbrot/support/`
+- `https://thumbrot.pages.dev/promote` → `…/thumbrot/promote/`
+
+The app and App Store Connect use only the short links, so these pages can move without an app update.
+The promote page offers free card swaps only: the app links to it, and Apple doesn't allow an app to link to
+the sale of ad space in that app (guideline 3.1.3(g)), so paid placements are never mentioned there.
+The pages describe Thumbrot 1.0 as of 2026-10-30. Source: the Thumbrot repo. Not attorney-reviewed.
