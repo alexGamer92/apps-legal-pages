@@ -89,3 +89,19 @@ here; their `_redirects` lives in the Thumbrot repo (`remote/_redirects`). So th
 The promote page offers free card swaps only: the app links to it, and Apple doesn't allow an app to link to
 the sale of ad space in that app (guideline 3.1.3(g)), so paid placements are never mentioned there.
 The pages describe Thumbrot 1.0 as of 2026-10-30. Source: the Thumbrot repo. Not attorney-reviewed.
+
+## CycleTron pages
+
+Served by the Cloudflare Pages project `cycletron-legal` from this repo (`main`), like the other apps. The build
+copies `cycletron/*` and `assets/` to the site root:
+
+- `https://cycletron-legal.pages.dev/privacy/`
+- `https://cycletron-legal.pages.dev/terms/`
+- `https://cycletron-legal.pages.dev/support/`
+
+Build command: `mkdir -p dist && cp -R assets cycletron/* dist/`; output directory: `dist`.
+
+They describe CycleTron 1.0 build 24 as of 2026-11-04: local-only, with no account, sign-in, server or backup;
+rides, routes and Health data stay on the iPhone and Apple Watch; Premium through Apple (StoreKit), following the
+Apple Account; Apple Maps for maps and directions; no ads, analytics or tracking. They replace the pages on
+cycletron.app. Source: the CycleTron repo (`docs/DECISIONS.md`, 2026-11-02 local-only release). Not attorney-reviewed.
