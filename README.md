@@ -95,6 +95,7 @@ The pages describe Thumbrot 1.0 as of 2026-10-30. Source: the Thumbrot repo. Not
 Served by the Cloudflare Pages project `cycletron-legal` from this repo (`main`), like the other apps. The build
 copies `cycletron/*` and `assets/` to the site root:
 
+- `https://cycletron-legal.pages.dev/` (home, `cycletron/index.html`)
 - `https://cycletron-legal.pages.dev/privacy/`
 - `https://cycletron-legal.pages.dev/terms/`
 - `https://cycletron-legal.pages.dev/support/`
