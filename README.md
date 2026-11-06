@@ -24,6 +24,15 @@ privacy policy as the home page:
 - `https://twentyquestions-legal.pages.dev/privacy/`
 - `https://twentyquestions-legal.pages.dev/terms/`
 - `https://twentyquestions-legal.pages.dev/support/`
+- `https://twentyquestions-legal.pages.dev/join?code=ABC234` (and `?kind=race&code=…`): the invite link the app
+  shares. With the app (build 19 or later) it opens the Join screen (a universal link, through
+  `twentyquestions/.well-known/apple-app-site-association`, served as JSON by `twentyquestions/_headers`); without
+  it, `twentyquestions/join/index.html` shows the code with Open in app and App Store.
+
+Build command: `mkdir -p dist && cp -R assets dist/ && cp -R twentyquestions/. dist/ && cp dist/privacy/index.html dist/index.html`;
+output directory: `dist`. It copies `twentyquestions/.`, not `twentyquestions/*`: a `*` glob skips dot-folders and would leave `.well-known` out. Check after a deploy:
+`curl -sI https://twentyquestions-legal.pages.dev/.well-known/apple-app-site-association` gives `200`,
+`content-type: application/json` and no `location`.
 
 The app's Profile links (`AppLinks` in `twentyq/.../Screens/ProfileScreen.swift`) point here; App Store
 Connect's privacy policy, terms and support URLs should be these too.
