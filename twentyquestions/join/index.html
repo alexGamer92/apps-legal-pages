@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a game of Twenty Questions</title>
+<meta name="description" content="An invite to a friend competition or live race in Twenty Questions: Emoji for iPhone.">
+<meta name="robots" content="noindex">
+<meta name="apple-itunes-app" content="app-id=6820047992">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Twenty Questions: Emoji">
+<meta property="og:title" content="Join my game of Twenty Questions">
+<meta property="og:description" content="Tap to open the invite in Twenty Questions: Emoji, or enter the code in Compete → Join.">
+<meta property="og:url" content="https://twentyquestions-legal.pages.dev/join/">
+<meta property="og:image" content="https://twentyquestions-legal.pages.dev/join/icon.png">
+<link rel="stylesheet" href="/assets/styles.css">
+<style>
+.codebox { margin: 1.5rem 0; padding: 20px; border: 1px solid var(--border); border-radius: 14px; text-align: center; }
+.label { margin: 0; color: var(--muted); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.code { margin: .25rem 0 .5rem; font: 800 clamp(2rem, 11vw, 3rem)/1.1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .2em; direction: ltr; user-select: all; }
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 1.5rem 0; }
+.button { display: inline-block; padding: 12px 20px; border-radius: 12px; background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; }
+.button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="/support/">Support</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></nav>
+<h1 id="title">Join a game of Twenty Questions</h1>
+<p class="meta" id="lead">You were invited to play Twenty Questions: Emoji, the iPhone game where you find the hidden emoji with yes/no questions.</p>
+<div class="codebox" id="codebox" hidden>
+<p class="label">Code</p>
+<p class="code" id="code"></p>
+<p>Enter it in <strong>Compete → Join</strong>.</p>
+</div>
+<p id="nocode" hidden>This link has no valid code. Ask your friend for the 6-character code and enter it in <strong>Compete → Join</strong>.</p>
+<p class="buttons">
+<a class="button" id="open" href="twentyquestions://join">Open in app</a>
+<a class="button secondary" href="https://apps.apple.com/app/id6820047992">App Store</a>
+</p>
+<p class="meta">No app yet? Get it from the App Store, open it, then tap this link again or enter the code.</p>
+<footer>Twenty Questions: Emoji · Invite</footer>
+</main>
+<script>
+// The code and kind come from the address: only a code made of the join-code alphabet is used, and only
+// through textContent and the link's href, both built from the checked value.
+function tqInvite(search) {
+  var params = new URLSearchParams(search);
+  var code = (params.get("code") || "").trim().toUpperCase();
+  if (!/^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6}$/.test(code)) return null;
+  return { code: code, race: params.get("kind") === "race" };
+}
+function tqShow(doc, search) {
+  var invite = tqInvite(search);
+  var title = invite === null ? "Join a game of Twenty Questions"
+    : invite.race ? "Join my live race in Twenty Questions" : "Join my Twenty Questions competition";
+  doc.getElementById("title").textContent = title;
+  doc.title = title;
+  doc.getElementById("code").textContent = invite === null ? "" : invite.code;
+  doc.getElementById("codebox").hidden = invite === null;
+  doc.getElementById("nocode").hidden = invite !== null;
+  doc.getElementById("open").href = invite === null ? "twentyquestions://join"
+    : "twentyquestions://join?" + (invite.race ? "kind=race&" : "") + "code=" + invite.code;
+}
+tqShow(document, location.search);
+</script>
+</body>
+</html>
