@@ -133,6 +133,6 @@ They describe RAM Rush 1.0 (pre-release) as of 2026-11-09 ("RAM Rush: 8-Bit Memo
 App Store id 6832566540, not yet released): no account, sign-in, server or analytics; progress (best results, cleared
 levels, the run to resume) stored only on the device, no iCloud sync; opt-in Google AdMob rewarded ads only ("Watch ad:
 +1 life" after losing all lives), with Google's UMP consent message in the EEA, UK and Switzerland, no ATT prompt and
-no IDFA; a built-in house ad with no network when no ad is available; ECC Mode, a weekly subscription through Apple
+no IDFA; the extra life only after a watched ad, none when offline or no ad is available; ECC Mode, a weekly subscription through Apple
 (5 lives, 10% loss, not ad-free); ages 13+. Ram Altman is a fictional parody character. Source: the ramaltman repo.
 Not attorney-reviewed.
