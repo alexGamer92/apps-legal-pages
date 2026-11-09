@@ -115,3 +115,24 @@ They describe CycleTron 1.0 build 24 as of 2026-11-04: local-only, with no accou
 rides, routes and Health data stay on the iPhone and Apple Watch; Premium through Apple (StoreKit), following the
 Apple Account; Apple Maps for maps and directions; no ads, analytics or tracking. They replace the pages on
 cycletron.app. Source: the CycleTron repo (`docs/DECISIONS.md`, 2026-11-02 local-only release). Not attorney-reviewed.
+
+## RAM Rush pages
+
+Served by the Cloudflare Pages project `ramrush-legal` from this repo (`main`), like the other apps. The build
+copies `ramrush/*` and `assets/` to the site root:
+
+- `https://ramrush-legal.pages.dev/` (home, `ramrush/index.html`)
+- `https://ramrush-legal.pages.dev/privacy/`
+- `https://ramrush-legal.pages.dev/terms/`
+- `https://ramrush-legal.pages.dev/support/`
+- `https://ramrush-legal.pages.dev/app-ads.txt` (AdMob authorized sellers, `ramrush/app-ads.txt`)
+
+Build command: `mkdir -p dist && cp -R assets ramrush/* dist/`; output directory: `dist`.
+
+They describe RAM Rush 1.0 (pre-release) as of 2026-11-09 ("RAM Rush: 8-Bit Memory Run", bundle `com.ramrush.game`,
+App Store id 6832566540, not yet released): no account, sign-in, server or analytics; progress (best results, cleared
+levels, the run to resume) stored only on the device, no iCloud sync; opt-in Google AdMob rewarded ads only ("Watch ad:
++1 life" after losing all lives), with Google's UMP consent message in the EEA, UK and Switzerland, no ATT prompt and
+no IDFA; a built-in house ad with no network when no ad is available; ECC Mode, a weekly subscription through Apple
+(5 lives, 10% loss, not ad-free); ages 13+. Ram Altman is a fictional parody character. Source: the ramaltman repo.
+Not attorney-reviewed.
