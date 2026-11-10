@@ -136,5 +136,5 @@ levels, the run to resume) stored only on the device, no iCloud sync; opt-in Goo
 no IDFA; the extra life only after a watched ad, none when offline or no ad is available; ECC Mode, a weekly subscription through Apple
 (5 lives, 10% loss, not ad-free); ages 13+, with Apple's Declared Age Range kept on the device and used only to pick Google's
 child or teen ad treatment; Google receives the approximate location derived from the IP address; Settings › Report an ad
-emails us (the age check and Settings land in the app before submission). Ram Altman is a fictional parody character. Source: the ramaltman repo.
+emails us (the age check and Settings land in the app before submission). Ram Banks, the hero, is a fictional cartoon character. Source: the RAM Rush game repo.
 Not attorney-reviewed.
