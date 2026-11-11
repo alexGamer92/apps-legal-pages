@@ -1,2 +1,3 @@
 # RAM Rush (iOS, App Store id6832566540) - authorized ad sellers. Updated 2026-11-09.
 google.com, pub-1407087486937211, DIRECT, f08c47fec0942fa0
+# PLACEHOLDER (task 4.11): Unity Ads line goes here, copied exactly from the client's Unity dashboard (Monetization > app-ads.txt), with the date. Not filled in yet.
